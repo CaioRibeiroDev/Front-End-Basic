@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .player-options img,
+    .enemy-options img{
+      max-width: 200px;
+      opacity: 0.3;
+      cursor: pointer;
+    }
+
+    .align {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Pedra, papel ou tesoura</h1>
+  <hr>
+
+  <div class="align">
+    <div class="player-options">
+      <div><img opt="pedra" src="rock.png" alt=""></div>
+      <div><img opt="papel" src="paper.png" alt=""></div>
+      <div><img opt="tesoura" src="scisor.png" alt=""></div>
+    </div>
+
+    <div class="enemy-options">
+      <div><img opt="pedra" src="rock.png" alt=""></div>
+      <div><img opt="papel" src="paper.png" alt=""></div>
+      <div><img opt="tesoura" src="scisor.png" alt=""></div>
+    </div>
+  </div>
+
+  <script>
+    var elementos = document.querySelectorAll('.player-options div > img');
+    var playerOpt = ""
+    var inimigoOpt = ""
+
+    function validarVitoria() {
+        //Condições.    
+    }
+
+    function resetInimigo(){
+      const enemyOptions = document.querySelectorAll('.enemy-options div');
+      for(let i = 0; i < enemyOptions.length; i++){
+          enemyOptions[i].childNodes[0].style.opacity = 0.3;
+      }
+    }
+
+    function inimigoJogar(){
+      let rand = Math.floor(Math.random()*3);
+
+      const enemyOptions = document.querySelectorAll('.enemy-options div');
+      resetInimigo();
+      for(let i = 0; i < enemyOptions.length; i++){
+        if(i == rand) {
+          enemyOptions[i].childNodes[0].style.opacity = 1;
+          inimigoOpt = enemyOptions[i].childNodes[0].getAttribute('opt')
+        }
+      }
+    }
+
+    function resetOpacityPlayer(){
+      for(let i = 0; i < elementos.length; i++){
+        elementos[i].style.opacity = 0.3;
+      }
+    }
+
+    for(let i = 0; i < elementos.length; i++){
+      elementos[i].addEventListener('click', (el) => {
+        resetOpacityPlayer();
+        el.target.style.opacity = 1;
+        playerOpt = el.target.getAttribute('opt');
+
+        inimigoJogar();
+      });
+    }
+
+    validarVitoria();
+  </script>
+</body>
+</html>

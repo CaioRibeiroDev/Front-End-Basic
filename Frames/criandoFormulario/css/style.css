@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* input[type="file"]{
+    display: none
+}
+
+label {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 220px;
+    height: 40px;
+    background-color: #ccc;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+} */
+
+ 
+
+form {
+    text-align: center;
+    background-color: #ccc;
+    padding: 30px 0;
+}
+
+/* form select {
+    width: 220px;
+    height: 40px;
+    border: 0;
+    padding-left: 10px;
+    background-image: url(../img/seta.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position:96% 8px;
+    appearance: none;
+} */
+ 
+
+input[type=checkbox]{
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+}
+
+input[type=checkbox]:checked + label {
+    background-color: rebeccapurple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form{
+    width: 96%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form fieldset {
+    padding: 0 40px;
+    border: 1px solid #ccc; 
+}
+
+form legend {
+    font-size: 17px;
+    text-align: left;
+}
+
+.input-email input  {
+    display: inline-block;
+    margin-top: 30px;
+    width: 80%;
+    padding: 10px 13px;
+    outline: none;
+}
+
+form select {
+    display: inline-block;
+    margin-top:30px;
+    width: calc(80% + 26px);
+    padding: 10px 13px;
+}
+
+
+form h2{
+    margin-top: 20px;
+}
+
+.input{
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.input span {
+    margin-left: 13px;
+    font-size: 16px;
+    color: rgb(130, 130, 130);
+}
+
+form input[type="submit"] {
+    margin-top: 30px;
+    border: 0px;
+    width: 140px;
+    height: 50px;
+    background-color: green;
+    border: 2px solid rgb(0, 0, 0, 0.05);
+    cursor: pointer;
+    outline: 0;
+}
+
+form textarea {
+    margin-top: 30px;
+    width: 80%;
+    height: 140px;
+    outline: 0;
+    resize: none;
+} */
